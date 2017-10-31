@@ -1,3 +1,5 @@
+<!-- create an account: enter birthday -->
+<!-- TODO: possible birth years, is there a better way than typing everything out lol -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,84 +13,72 @@
   <body>
     <br><br>
     <!-- insert nav bar w back button here -->
-    <div class="btn-group">
-    <div class="dropdown">
+    <div class="col-lg-2 col-sm-2">
       <label>Enter your date of birth</label>
       <br>
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="monthDropdown"
-      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Month
-      </button>
-      <div class="dropdown-menu" aria-labelledby="monthDropdown">
-        <a class="dropdown-item" href="#">January</a>
-        <a class="dropdown-item" href="#">February</a>
-        <a class="dropdown-item" href="#">March</a>
-        <a class="dropdown-item" href="#">April</a>
-        <a class="dropdown-item" href="#">May</a>
-        <a class="dropdown-item" href="#">June</a>
-        <a class="dropdown-item" href="#">July</a>
-        <a class="dropdown-item" href="#">August</a>
-        <a class="dropdown-item" href="#">September</a>
-        <a class="dropdown-item" href="#">October</a>
-        <a class="dropdown-item" href="#">November</a>
-        <a class="dropdown-item" href="#">December</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dayDropdown"
-      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Day
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dayDropdown">
-        <a class="dropdown-item" href="#">1</a>
-        <a class="dropdown-item" href="#">2</a>
-        <a class="dropdown-item" href="#">3</a>
-        <a class="dropdown-item" href="#">4</a>
-        <a class="dropdown-item" href="#">5</a>
-        <a class="dropdown-item" href="#">6</a>
-        <a class="dropdown-item" href="#">7</a>
-        <a class="dropdown-item" href="#">8</a>
-        <a class="dropdown-item" href="#">9</a>
-        <a class="dropdown-item" href="#">10</a>
-        <a class="dropdown-item" href="#">11</a>
-        <a class="dropdown-item" href="#">12</a>
-        <a class="dropdown-item" href="#">13</a>
-        <a class="dropdown-item" href="#">14</a>
-        <a class="dropdown-item" href="#">15</a>
-        <a class="dropdown-item" href="#">16</a>
-        <a class="dropdown-item" href="#">17</a>
-        <a class="dropdown-item" href="#">18</a>
-        <a class="dropdown-item" href="#">19</a>
-        <a class="dropdown-item" href="#">20</a>
-        <a class="dropdown-item" href="#">21</a>
-        <a class="dropdown-item" href="#">22</a>
-        <a class="dropdown-item" href="#">23</a>
-        <a class="dropdown-item" href="#">24</a>
-        <a class="dropdown-item" href="#">25</a>
-        <a class="dropdown-item" href="#">26</a>
-        <a class="dropdown-item" href="#">27</a>
-        <a class="dropdown-item" href="#">28</a>
-        <a class="dropdown-item" href="#">29</a>
-        <a class="dropdown-item" href="#">30</a>
-        <a class="dropdown-item" href="#">31</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="yearDropdown"
-      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Year
-      </button>
-      <div class="dropdown-menu" aria-labelledby="yearDropdown">
-        <a class="dropdown-item" href="#">1995</a>
-        <a class="dropdown-item" href="#">1996</a>
-        <a class="dropdown-item" href="#">1997</a>
-      </div>
+      <select class="form-control">
+        <option selected disabled>Month</option>
+        <option value="jan">January</option>
+        <option value="feb">February</option>
+        <option value="feb">March</option>
+        <option value="feb">April</option>
+        <option value="feb">May</option>
+        <option value="feb">June</option>
+        <option value="feb">July</option>
+        <option value="feb">August</option>
+        <option value="feb">September</option>
+        <option value="feb">October</option>
+        <option value="feb">November</option>
+        <option value="feb">December</option>
+      </select>
+      <select class="form-control">
+        <option selected disabled>Day</option>
+        <option value="jan">1</option>
+        <option value="feb">2</option>
+        <option value="feb">3</option>
+        <option value="feb">4</option>
+        <option value="feb">5</option>
+        <option value="feb">6</option>
+        <option value="feb">7</option>
+        <option value="feb">8</option>
+        <option value="feb">9</option>
+        <option value="feb">10</option>
+        <option value="feb">11</option>
+        <option value="feb">12</option>
+        <option value="jan">13</option>
+        <option value="jan">14</option>
+        <option value="jan">15</option>
+        <option value="jan">16</option>
+        <option value="jan">17</option>
+        <option value="jan">18</option>
+        <option value="jan">19</option>
+        <option value="jan">20</option>
+        <option value="feb">21</option>
+        <option value="feb">22</option>
+        <option value="feb">23</option>
+        <option value="feb">24</option>
+        <option value="feb">25</option>
+        <option value="feb">26</option>
+        <option value="feb">27</option>
+        <option value="feb">28</option>
+        <option value="feb">29</option>
+        <option value="feb">30</option>
+        <option value="feb">31</option>
+      </select>
+      <select class="form-control">
+        <option selected disabled>Year</option>
+        <option value="1960">1960</option>
+        <option value="1961">1961</option>
+        <option value="1962">1962</option>
+        <option value="1963">1963</option>
+        <option value="1964">1964</option>
+        <option value="1965">1965</option>
+        <option value="1966">1966</option>
+      </select>
       <br><br>
-      <a class="btn btn-outline-dark float-left" href="./join_password.html" role="button">Back</a>
-      <a class="btn btn-outline-dark float-right" href="./join_profpic.html" role="button">Next</a>
+      <a class="btn btn-outline-dark float-left" href="./join_gender.html" role="button">Back</a>
+      <a class="btn btn-outline-dark float-right" href="./join_profilepic.html" role="button">Next</a>
     </div>
-</div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
