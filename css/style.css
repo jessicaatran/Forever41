@@ -1,9 +1,8 @@
-
-
-#diabetes, #high-blood-pressure, #add-condition {
+#one, #two, #add {
     display: inline-block;
-    width: 49%;
-    /*width: 0%;*/
+    width: 100%;
 }
 
-
+#condition-heading {
+  text-align: center;
+}
