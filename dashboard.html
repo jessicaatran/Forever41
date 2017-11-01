@@ -10,13 +10,63 @@
 
   </head>
   <body>
-    <h1>Dashboard</h1>
-    <img src="./images/dashboard.jpg" class="img-fluid rounded mx-auto d-block" alt="Responsive image">
+    <!-- heading? -->
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">Forever 41</span>
+    </nav>
 
 
+    <div class="media col-sm-2">
+      <img class="img-thumbnail align-self-center mr-3" src="./images/profile-placeholder.jpg" class="img-fluid rounded mx-auto d-block" alt="Responsive image">
+      <div class="media-body">
+        <h5 class="mt-0">Your Name</h5>
+      </div>
+    </div>
+    <br>
+    <!-- overview box -->
+    <div class="col-sm-12">
+      <div class="card text-center" id="overview">
+        <div class="card-body">
+          <h4 class="card-title">Overview</h4>
+        </div>
+      </div>
+    </div>
+    <!-- health condition boxes -->
+    <div class="col-sm-12">
+      <div class="card text-center">
+        <div class="card-body">
+          <h4 class="card-title">Diabeties</h4>
+        </div>
+      </div>
+      <div class="card text-center">
+        <div class="card-body">
+          <h4 class="card-title">High Blood Pressure</h4>
+        </div>
+      </div>
+      <div class="card text-center">
+        <div class="card-body">
+          <h4 class="card-title">+</h4>
+        </div>
+      </div>
+    </div>
 
+
+    <!-- bottom nav bar -->
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="dashboard.html">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Profile</a>
+      </li>
+    </ul>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+      $('#overview').click(function(){
+        window.location.href = './overview.html';
+      });
+    </script>
   </body>
 </html>
