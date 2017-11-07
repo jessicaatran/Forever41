@@ -7,7 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script>
+
+    <!-- Custom CSS -->
     <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+
 
   </head>
   <body>
@@ -20,6 +33,24 @@
     </nav>
     <br>
 
+    <div class="select2-conditions">
+        <label>Add a new condition</label>
+        <br>
+        <!-- Note the missing multiple attribute! -->
+        <select class="js-example-basic-multiple" name="conditions[]" multiple="multiple">
+            <option value="Alzheimer">Alzheimer's Disease</option>
+            <option value="Arthritis">Arthritis</option>
+            <option value="Asthma">Asthma</option>
+            <option value="Back">Back pain</option>
+            <option value="Dementia">Dementia</option>
+            <option value="Diabetes">Diabetes</option>
+            <option value="Heart Disease">Heart Disease</option>
+            <option value="High Blood Pressure">High Blood Pressure</option>
+            <option value="Osteoporosis">Osteoporosis</option>
+            <option value="Tendonitis">Tendonitis</option>
+        </select>
+    </div>
+
 
     <!-- bottom nav bar -->
     <ul class="nav justify-content-center fixed-bottom">
@@ -30,13 +61,19 @@
         <a class="nav-link" href="./profile.html">Profile</a>
       </li>
     </ul>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  
     <script>
       $('#back').click(function(){
         window.location.href = './dashboard.html';
       });
     </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            console.log('hello');
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>
+    
   </body>
 </html>
