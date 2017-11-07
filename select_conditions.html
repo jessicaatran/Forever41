@@ -20,7 +20,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
 
-
   </head>
   <body>
     <!-- header -->
@@ -34,11 +33,11 @@
         <label>Enter your conditions</label>
         <br>
         <!-- Note the missing multiple attribute! -->
-        <select class="js-example-basic-multiple" name="conditions[]" multiple="multiple">
-            <option value="Alzheimer">Alzheimer's Disease</option>
+        <select class="select2-multiple" id="select2-conditions" name="conditions[]" multiple="multiple">
+            <option value="Alzheimer's Disease">Alzheimer's Disease</option>
             <option value="Arthritis">Arthritis</option>
             <option value="Asthma">Asthma</option>
-            <option value="Back">Back pain</option>
+            <option value="Back pain">Back pain</option>
             <option value="Dementia">Dementia</option>
             <option value="Diabetes">Diabetes</option>
             <option value="Heart Disease">Heart Disease</option>
@@ -50,14 +49,26 @@
 
     <br>
     <a class="btn btn-outline-dark float-left" href="./join_profilepic.html" role="button">Back</a>
-    <a class="btn btn-outline-dark float-right" href="./dashboard.html" role="button">Finish</a>
-    
+    <a class="btn btn-outline-dark float-right" id="finish" href="./dashboard.html" role="button">Finish</a>
+
     <script type="text/javascript">
         $(document).ready(function() {
-            console.log('hello');
-            $('.js-example-basic-multiple').select2();
+          console.log('hello');
+          $('.select2-multiple').select2();
+        });
+        $('#finish').click(function() {
+          var addConditions = $('.select2-multiple').select2("val") + '';
+          console.log("Selected value is: ", addConditions);
+          if (localStorage.getItem('addConditions')) {
+            localStorage.setItem('addConditions', localStorage.getItem('addConditions') + ','+ addConditions);
+          } else {
+            localStorage.setItem('addConditions', addConditions);
+          }
+          window.location.href = './dashboard.html';
         });
     </script>
+
+    <script src="./javascript/js.js"></script>
     
 
 </body>
