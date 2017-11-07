@@ -28,15 +28,13 @@
     </div>
     <br>
     <!-- overview box -->
-    <div class="col-sm-12">
+    <div class="cards col-xs-12">
       <div class="card text-center" id="overview">
         <div class="card-body">
           <h4 class="card-title">Overview</h4>
         </div>
       </div>
-    </div>
     <!-- health condition boxes -->
-    <div class="col-sm-12">
       <div class="card text-center py-2" id="one">
         <div class="card-body">
           <h4 class="card-title">Diabetes</h4>
@@ -69,6 +67,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="./javascript/js.js"></script>
     <script>
+      if (localStorage.getItem('addConditions')) {
+        console.log("LocalStorage: ", localStorage.getItem('addConditions'));
+        var conditions = (localStorage.getItem('addConditions') + '').split(',');
+        console.log(conditions);
+        for (var i = 0; i < conditions.length; i++) {
+          console.log(conditions[i]);
+          var $div = $('<div/>', {
+            class: 'card text-center',
+            id: 'added-condition-' + i,
+            rel: 'external',
+
+          }).html('<div class="card text-center"><div class="card-body"><h4 class="card-title">' + conditions[i] + '</h4></div></div>');
+          $($div).insertAfter($('#two'));
+        }
+      }
       $('#overview').click(function(){
         window.location.href = './overview.html';
       });
@@ -81,6 +94,11 @@
       $('#two').click(function(){
         window.location.href = './highbp.html';
       });
+
+      // HARD CODED TO HIGH BLOOD PRESSURE RN
+      $('#added-condition-0').click(function() {
+        window.location.href = './highbp.html';
+      })
     </script>
   </body>
 </html>

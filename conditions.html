@@ -37,11 +37,11 @@
         <label>Add a new condition</label>
         <br>
         <!-- Note the missing multiple attribute! -->
-        <select class="js-example-basic-multiple" name="conditions[]" multiple="multiple">
+        <select class="select2-multiple" id="select2-conditions" name="conditions[]" multiple="multiple">
             <option value="Alzheimer">Alzheimer's Disease</option>
             <option value="Arthritis">Arthritis</option>
             <option value="Asthma">Asthma</option>
-            <option value="Back">Back pain</option>
+            <option value="Back Pain">Back pain</option>
             <option value="Dementia">Dementia</option>
             <option value="Diabetes">Diabetes</option>
             <option value="Heart Disease">Heart Disease</option>
@@ -53,7 +53,9 @@
 
     <br>
     <div class="text-center">
-      <a class="btn btn-outline-dark" href="./dashboard.html" role="button">Submit</a>
+      <a class="btn btn-outline-dark" id="submit" role="button">Submit</a>
+      <!-- <a class="btn btn-outline-dark" href="./dashboard.html" role="button">Submit</a> -->
+
     </div>
 
     <!-- bottom nav bar -->
@@ -74,8 +76,19 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            console.log('hello');
-            $('.js-example-basic-multiple').select2();
+          console.log('hello');
+          $('.select2-multiple').select2();
+        });
+
+        $('#submit').click(function() {
+          var addConditions = $('.select2-multiple').select2("val") + '';
+          console.log("Selected value is: ", addConditions);
+          if (localStorage.getItem('addConditions')) {
+            localStorage.setItem('addConditions', localStorage.getItem('addConditions') + ','+ addConditions);
+          } else {
+            localStorage.setItem('addConditions', addConditions);
+          }
+          window.location.href = './dashboard.html';
         });
     </script>
     

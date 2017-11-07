@@ -1,9 +1,9 @@
 $('#back-join').click(function(){
-  window.location.href = './index.html';
+  window.history.back();
 });
 
 $('#back').click(function(){
-  window.location.href = './dashboard.html';
+  window.history.back();
 });
 
 $('#setting').click(function(){
