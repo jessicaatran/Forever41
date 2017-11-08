@@ -13,3 +13,7 @@ $('#setting').click(function(){
 $('#help').click(function(){
   window.location.href = './help.html';
 });
+
+$('.fa-sign-out').click(function() {
+  window.location.href = './index.html';
+});
