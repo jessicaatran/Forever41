@@ -23,16 +23,16 @@
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Lifestyle</a>
+        <a class="nav-link active" id="diabetes-lifestyle-tab" data-toggle="tab" href="#diabetes-lifestyle" role="tab" aria-controls="diabetes-lifestyle" aria-selected="true">Lifestyle</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Food</a>
+        <a class="nav-link" id="diabetes-food-tab" data-toggle="tab" href="#diabetes-food" role="tab" aria-controls="diabetes-food" aria-selected="false">Food</a>
       </li>
     </ul>
 
     <!-- Tab panes -->
     <div class="tab-content">
-      <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div class="tab-pane active" id="diabetes-lifestyle" role="tabpanel" aria-labelledby="diabetes-lifestyle-tab">
         <ul>
           <li>
             Lose extra weight.
@@ -71,7 +71,7 @@
           </li>
         </ul>
       </div>
-      <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="tab-pane" id="diabetes-food" role="tabpanel" aria-labelledby="diabetes-food-tab">
         <div class="diabetes-eat-more col-xs-12">
           <hX><b>Eat more</b></hX>
           <ul>
@@ -114,6 +114,10 @@
       $('#back').click(function(){
         window.location.href = './dashboard.html';
       });
+    </script>
+
+    <script>
+      console.log('SOS');
     </script>
   </body>
 </html>

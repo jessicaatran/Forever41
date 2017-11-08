@@ -35,15 +35,15 @@
     <!-- Tab panes -->
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <ul>
-          <li>asdfghjkl</li>
+        <ul id="lifestyle-list">
+          <li>1</li>
           <li>qwertyuiop</li>
           <li>zxcvbnm</li>
         </ul>
       </div>
       <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <ul>
-          <li>asdfghjkl</li>
+        <ul id="food-list">
+          <li>2</li>
           <li>qwertyuiop</li>
           <li>zxcvbnm</li>
         </ul>
@@ -69,6 +69,18 @@
       $('#back').click(function(){
         window.location.href = './dashboard.html';
       });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        if (localStorage.getItem('addConditions')) {
+          console.log("LocalStorage: ", localStorage.getItem('addConditions'));
+          var conditions = (localStorage.getItem('addConditions') + '').split(',');
+          console.log(conditions);
+
+          $('#home').load('./diabetes.html #diabetes-food');
+        }  
+      })
     </script>
   </body>
 </html>
